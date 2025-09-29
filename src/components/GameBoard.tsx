@@ -92,8 +92,8 @@ const GameBoard: React.FC = () => {
         <GameCard
           key={index}
           value={card.value}
-          flipped={card.flipped}
-          matched={card.matched}
+          flipped={card.flipped ?? false}
+          matched={card.matched ?? false}
           onClick={() => handleCardClick(index)}
           disabled={disabled}
         />

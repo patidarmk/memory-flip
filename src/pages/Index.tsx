@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from '@tanstack/react-router';
 import { MadeWithApplaa } from '@/components/made-with-applaa';
-import { themes, ThemeKey, Card as ThemeCard } from '@/data/themes';
+import { themes, ThemeKey } from '@/data/themes';
 
 const Index: React.FC = () => {
   return (
@@ -30,7 +30,7 @@ const Index: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {Object.entries(themes).map(([key, cards]) => {
               const typedKey = key as ThemeKey;
-              const sample = (cards as ThemeCard[])[0].value;
+              const sample = cards[0].value;
               return (
                 <Card key={typedKey} className="hover:shadow-lg transition-shadow">
                   <CardHeader>
